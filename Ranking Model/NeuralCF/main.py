@@ -16,7 +16,7 @@ EMBEDDING_DIM = 8
 LEARNING_RATE = 1e-4
 REGULARIZATION = 1e-6
 BATCH_SIZE = 4096
-EPOCHS = 10
+EPOCHS = 500
 
 # 加载数据
 field_dims, (train_X, train_y), (valid_X, valid_y), (test_X, test_y) = get_data(data_path, device)
