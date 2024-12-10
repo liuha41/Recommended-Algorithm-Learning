@@ -26,7 +26,7 @@ def main(args):
     loss_fn = torch.nn.BCELoss()
 
     # 模型训练
-    train(model, train_loader, val_loader, optimizer, loss_fn, args.epochs, args.device, args.dataset_name,
+    train_and_evaluate(model, train_loader, val_loader, optimizer, loss_fn, args.epochs, args.device, args.dataset_name,
           args.model_name)
 
 

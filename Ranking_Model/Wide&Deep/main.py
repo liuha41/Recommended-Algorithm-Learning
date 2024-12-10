@@ -28,7 +28,7 @@ def main(args):
     loss_fn = torch.nn.BCELoss()
 
     # 模型训练
-    train(model, train_loader, val_loader, optimizer, loss_fn, args.epochs, args.device, args.dataset_name,
+    train_and_evaluate(model, train_loader, val_loader, optimizer, loss_fn, args.epochs, args.device, args.dataset_name,
           args.model_name)
 
 if __name__ == "__main__":
@@ -51,7 +51,7 @@ if __name__ == "__main__":
 
     # 其他参数
     parser.add_argument('--dataset_name', type=str, default='criteo', help='数据集名称')
-    parser.add_argument('--model_name', type=str, default='NFM', help='模型名称')
+    parser.add_argument('--model_name', type=str, default='Wide&Deep', help='模型名称')
 
     args = parser.parse_args()
     main(args)
