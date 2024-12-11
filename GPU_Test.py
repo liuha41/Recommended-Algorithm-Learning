@@ -4,6 +4,7 @@ import torch
 is_cuda_available = torch.cuda.is_available()
 print(f"CUDA 可用: {is_cuda_available}")
 
+
 if is_cuda_available:
     # 获取 GPU 数量
     gpu_count = torch.cuda.device_count()
